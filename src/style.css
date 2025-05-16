@@ -5,14 +5,14 @@
 }
 
 #title {
-    color: #fec7d7;
+    color: #1f4927;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 #subtitle {
-    color: #fec7d7;
+    color: #1f4927;
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ fieldset {
 }
 
 body {
-    background-color: #181818;
+    background-color: #739573;
     font-size: 1em;
     color: #272343;
     justify-content: center;
@@ -69,7 +69,7 @@ textarea {
 }
 
 .field input:focus, .field select:focus, .field textarea:focus {
-    background-color: #fec7d7;
+    background-color: #739573;
 }
 
 .button {
@@ -104,7 +104,7 @@ textarea {
 }
 
 #white-background {
-    background:#fec7d7;
+    background: #78b178;
     display: inline-block;
     padding: 20px;
     border-radius: 10px;

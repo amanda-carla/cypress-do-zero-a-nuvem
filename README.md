@@ -1,28 +1,86 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# 🧪 Cypress do Zero à Nuvem
 
-👋 Seja bem-vindo(a)!
+Este projeto realiza testes end-to-end (E2E) com [Cypress](https://www.cypress.io/) em uma aplicação HTML estática hospedada localmente. O objetivo é praticar e demonstrar o uso do Cypress na automação de testes de interface.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+🔗 **Repositório GitHub:** [github.com/amanda-carla/cypress-do-zero-a-nuvem](https://github.com/amanda-carla/cypress-do-zero-a-nuvem)
 
-## O que você vai aprender?
+---
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+## 📁 Estrutura do Projeto
 
-## Vamos começar?
+📦 cypress-do-zero-a-nuvem
+├── cypress/ # Testes E2E com Cypress
+│ ├── e2e/
+│ ├── support/
+│ └── fixtures/
+├── src/ # Página HTML e arquivos estáticos
+│ ├── index.html
+│ ├── privacy.html
+│ ├── script.js
+│ └── style.css
+├── .gitignore
+├── cypress.config.js # Configurações do Cypress
+├── LICENSE
+├── package.json
+├── package-lock.json
+└── README.md
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+yaml
+Copiar
+Editar
 
-___
+---
 
-Este é um curso da **Escola Talking About Testing**.
+## 🚀 Tecnologias utilizadas
+
+- [Cypress](https://docs.cypress.io/) – Framework de testes E2E moderno
+- HTML5 – Páginas estáticas simples (`index.html`, `privacy.html`)
+- JavaScript – Scripts da página
+- CSS – Estilização básica
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) – Extensão do VSCode para servir a página localmente
+
+---
+
+## ✅ Pré-requisitos
+
+- [Node.js](https://nodejs.org/) instalado
+- [VS Code](https://code.visualstudio.com/) com a extensão **Live Server**
+- Git instalado (opcional)
+
+---
+
+## ⚙️ Instalação
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/amanda-carla/cypress-do-zero-a-nuvem.git
+   cd cypress-do-zero-a-nuvem
+Instale as dependências:
+
+bash
+Copiar
+Editar
+npm install
+No VS Code, clique com o botão direito no arquivo src/index.html e selecione "Open with Live Server"
+
+Verifique se a página foi aberta em http://127.0.0.1:5500/src/index.html
+
+🧪 Executando os testes
+Com o Live Server ativo, abra outro terminal e execute:
+
+bash
+Copiar
+Editar
+npx cypress open
+No painel do Cypress, selecione o teste *.cy.js dentro da pasta cypress/e2e.
+
+⚠️ Lembre-se de garantir que o caminho dentro de cy.visit() aponte para /src/index.html (ou privacy.html conforme o teste).
+
+💡 Dicas úteis
+Use it.only(...) para rodar um teste específico durante o desenvolvimento
+
+O beforeEach garante que a página seja recarregada antes de cada teste
+
+Comandos customizados podem ser definidos em cypress/support/commands.js
+
